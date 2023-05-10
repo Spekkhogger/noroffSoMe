@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../src/scss/index.scss">
+    <title>Noroff Social Media</title>
+</head>
+<body>
+    <header>
+        <h1>Noroff</h1>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <form class="form-group col-sm-10 col-lg-5 col-md-5" id="registration-form">
+                    
+                        <input class="form-control mb-2" type="text" name="name" required pattern="^[\w]+$" maxlength="20" placeholder="Full name">
+                        <input class="form-control mb-2" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" placeholder="E-mail">
+                        <input class="form-control mb-2" type="password" name="password" required minlength="8" placeholder="Password">
+                        <input class="form-control mb-2" type="url" name="banner" id="" placeholder="Banner (optional)">
+                        <input class="form-control mb-2" type="url" name="avatar" placeholder="Avatar (optional)">
+
+                        <button class="btn btn-success">Registrer user</button>
+
+                        <a href="../login/index.html" class="btn btn-success">Already have a user? Log in here</a>
+                    
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+    <script type="module" src="../../src/js/index.mjs"></script>
+</body>
+</html>

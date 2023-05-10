@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../src/scss/index.scss">
+    <title>Noroff Social Media</title>
+</head>
+<body>
+    <header>
+        <h1>Noroff</h1>
+    </header>
+
+
+    <main>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <form action="/auth/register" method="post" id="login-form"></form>
+                    <div class="form-group col-5">
+                        <input class="form-control mb-2" type="email" name="email" required pattern="^[\\w\\-.]+@(stud\\.)?noroff\\.no$" placeholder="E-mail">
+                        <input class="form-control mb-2" type="password" name="password" required minlength="8" placeholder="Password">
+                        <button class="btn btn-success">Sign in!</button>
+                        <a href="../register/index.html" class="btn btn-success">Create account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+</body>
+</html>

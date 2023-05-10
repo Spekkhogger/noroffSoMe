@@ -1,0 +1,15 @@
+{
+  "name": "noroff-social-media-application",
+  "version": "0.0.1",
+  "description": "A school assignment, creating a social media platform for Noroff",
+  "scripts": {
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
