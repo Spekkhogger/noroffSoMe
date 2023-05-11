@@ -22,6 +22,7 @@
 //         // createAccount(profile); 
 //     })
 // }
+import { logInAccount } from "../api/authenticate/login.mjs";
 import
 
 function logInFormFunc() {
@@ -31,6 +32,21 @@ function logInFormFunc() {
         event.preventDefault();
         const logInForm = event.target;
 
+        const name = registrationForm.name.value
+        const email = registrationForm.email.value
+        const password = registrationForm.password.value
+        const banner = registrationForm.banner.value
+        const avatar = registrationForm.avatar.value
+    
+        const profile = {
+            name,
+            email,
+            password,
+            banner,
+            avatar
+        }
+        
+        logInAccount(profile); 
 
     })
 }

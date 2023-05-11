@@ -1,12 +1,10 @@
-import {baseURL} from "./../../constants.mjs"
-import {logInFormFunc} from "./../../"
+import { baseURL } from "./../../constants.mjs"
 
 const path = "/auth/login";
 const method = "post";
 
 export async function logInAccount(profile) {
     const logInURL = baseURL + path; 
-
 
     const response = await fetch(logInURL, {
         headers: {
