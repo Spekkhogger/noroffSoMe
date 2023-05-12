@@ -1,10 +1,10 @@
-
+import { baseURL } from "./constants.mjs";
 
 const path = "/auth/register";
 const method = "post"; 
 
 export async function createAccount(profile) {
-    const registrationURL = ""
+    const registrationURL = baseURL + path;
 
 
     const response = await fetch(registrationURL, {

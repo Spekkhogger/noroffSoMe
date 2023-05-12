@@ -3,5 +3,10 @@
 import { registrationFormFunc } from "./handlers/registration.mjs";
 import { logInFormFunc } from "./handlers/login.mjs"; 
 
-registrationFormFunc();
-logInFormFunc(); 
+const path = location.pathname;
+
+if (path === "/profile/login/") {
+    logInFormFunc();
+} else if (path === "profile/register/"){
+    registrationFormFunc();
+}

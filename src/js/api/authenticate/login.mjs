@@ -1,4 +1,4 @@
-import { baseURL } from "./../../constants.mjs"
+import { baseURL } from "./constants.mjs"
 
 const path = "/auth/login";
 const method = "post";

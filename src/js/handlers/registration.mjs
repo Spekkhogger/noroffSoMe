@@ -1,3 +1,5 @@
+import { createAccount } from "./../api/authenticate/registration.mjs";
+
 export function registrationFormFunc(){
     const registrationForm = document.querySelector("#registration-form")
 

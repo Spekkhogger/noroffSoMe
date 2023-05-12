@@ -1,42 +1,17 @@
-// export function registrationFormFunc(){
-//     const registrationForm = document.querySelector("#registration-form")
-
-//     registrationForm.addEventListener("submit", (event) =>{
-//         event.preventDefault();
-//         const registrationForm = event.target; 
-    
-//         const name = registrationForm.name.value
-//         const email = registrationForm.email.value
-//         const password = registrationForm.password.value
-//         const banner = registrationForm.banner.value
-//         const avatar = registrationForm.avatar.value
-    
-//         const profile = {
-//             name,
-//             email,
-//             password,
-//             banner,
-//             avatar
-//         }
-//         console.log(profile);
-//         // createAccount(profile); 
-//     })
-// }
 import { logInAccount } from "../api/authenticate/login.mjs";
-import
 
-function logInFormFunc() {
+export function logInFormFunc() {
     const logInForm = document.querySelector("#login-form"); 
 
     logInForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const logInForm = event.target;
 
-        const name = registrationForm.name.value
-        const email = registrationForm.email.value
-        const password = registrationForm.password.value
-        const banner = registrationForm.banner.value
-        const avatar = registrationForm.avatar.value
+        const name = logInForm.name.value
+        const email = logInForm.email.value
+        const password = logInForm.password.value
+        const banner = logInForm.banner.value
+        const avatar = logInForm.avatar.value
     
         const profile = {
             name,
@@ -45,7 +20,7 @@ function logInFormFunc() {
             banner,
             avatar
         }
-        
+        console.log(profile);
         logInAccount(profile); 
 
     })
