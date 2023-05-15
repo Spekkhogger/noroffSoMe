@@ -17,13 +17,11 @@
     <main>
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <form action="/auth/register" method="post" id="login-form"></form>
-                    <div class="form-group col-5">
-                        <input class="form-control mb-2" type="email" name="email" required pattern="^[\\w\\-.]+@(stud\\.)?noroff\\.no$" placeholder="E-mail">
-                        <input class="form-control mb-2" type="password" name="password" required minlength="8" placeholder="Password">
-                        <button class="btn btn-success">Sign in!</button>
-                        <a href="../register/" class="btn btn-success">Create account</a>
-                    </div>
+                <form class="form-group col-sm-10 col-lg-5 col-md-5" id="login-form">             
+                    <input class="form-control mb-2" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" placeholder="E-mail">
+                    <input class="form-control mb-2" type="password" name="password" required minlength="8" placeholder="Password">
+                    <button class="btn btn-success" type="submit">Sign in!</button>
+                    <a href="../register/" class="btn btn-success">Create account</a>
                 </form>
             </div>
         </div>
@@ -36,5 +34,6 @@
 
     </footer>
     <script type="module" src="../../src/js/index.mjs"></script>
+    <!-- <script type="module" src="../../src/js/handlers/login.mjs"></script> -->
 </body>
 </html>

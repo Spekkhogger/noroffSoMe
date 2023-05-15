@@ -1,11 +1,10 @@
 import { baseURL } from "./constants.mjs";
 
 const path = "/auth/register";
-const method = "post"; 
+const method = "POST"; 
 
 export async function createAccount(profile) {
     const registrationURL = baseURL + path;
-
 
     const response = await fetch(registrationURL, {
         headers: {
@@ -16,4 +15,5 @@ export async function createAccount(profile) {
     })
 
     const result = await response.json()
+    return result;
 }

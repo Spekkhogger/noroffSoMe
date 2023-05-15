@@ -21,6 +21,6 @@ export function registrationFormFunc(){
             avatar
         }
         console.log(profile);
-        // createAccount(profile); 
+        createAccount(profile); 
     })
 }
