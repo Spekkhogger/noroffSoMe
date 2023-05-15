@@ -6,7 +6,6 @@ export function registrationFormFunc(){
         const formData = new FormData(event.target);
         const profile = Object.fromEntries(formData.entries());
 
-        console.log(profile);
         await createAccount(profile); 
     })
 }
@@ -28,6 +27,5 @@ async function createAccount(profile) {
     })
 
     const result = await response.json()
-    console.log(result); 
     return result;
 }

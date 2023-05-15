@@ -6,7 +6,6 @@ export function logInFormFunc() {
         const formData = new FormData(event.target);
         const profile = Object.fromEntries(formData.entries()); 
     
-        console.log(profile);
         await logInAccount(profile); 
         
     })    
@@ -30,8 +29,7 @@ async function logInAccount(profile) {
         const result = await response.json()
         localStorage.setItem("token", result.accessToken); 
     
-        console.log(result); 
     } catch (error) {
-        console.log(error); 
+        
     }
 }
