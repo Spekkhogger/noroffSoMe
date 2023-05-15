@@ -1,26 +1,33 @@
-import { createAccount } from "./../api/authenticate/registration.mjs";
-
 export function registrationFormFunc(){
     const registrationForm = document.querySelector("#registration-form")
 
-    registrationForm.addEventListener("submit", (event) =>{
-        event.preventDefault();
-        const registrationForm = event.target; 
-    
-        const name = registrationForm.name.value
-        const email = registrationForm.email.value
-        const password = registrationForm.password.value
-        const banner = registrationForm.banner.value
-        const avatar = registrationForm.avatar.value
-    
-        const profile = {
-            name,
-            email,
-            password,
-            banner,
-            avatar
-        }
+    registrationForm.addEventListener("submit", async(event) =>{
+        event.preventDefault(); 
+        const formData = new FormData(event.target);
+        const profile = Object.fromEntries(formData.entries());
+
         console.log(profile);
-        createAccount(profile); 
+        await createAccount(profile); 
     })
+}
+
+import { baseURL } from "../constants.mjs";
+
+const path = "/auth/register";
+const method = "POST"; 
+
+async function createAccount(profile) {
+    const registrationURL = baseURL + path;
+
+    const response = await fetch(registrationURL, {
+        headers: {
+            "Content-type": "application/json"
+        },
+        method,
+        body: JSON.stringify(profile)
+    })
+
+    const result = await response.json()
+    console.log(result); 
+    return result;
 }

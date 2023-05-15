@@ -6,19 +6,15 @@ import { logInFormFunc } from "./handlers/login.mjs";
 
 const path = location.pathname;
 
-// if (path === "/profile/login/") {
-//     console.log("I'm working too!")
-//     logInFormFunc();
-// } else if (path === "profile/register/"){
-//     console.log("Shouln't be here")
-//     registrationFormFunc();
-// }
+
 switch (path) {
     case "/":
-    case "profile/login/":
+    case "/profile/login/":
+        console.log(path);
         logInFormFunc();
         break;
-    case "profile/register/":
-        registrationFormFunc;
+    case "/profile/register/":
+        console.log(path);
+        registrationFormFunc();
         break;
 }
