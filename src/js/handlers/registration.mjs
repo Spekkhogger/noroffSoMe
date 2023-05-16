@@ -18,14 +18,19 @@ const method = "POST";
 async function createAccount(profile) {
     const registrationURL = baseURL + path;
 
-    const response = await fetch(registrationURL, {
-        headers: {
-            "Content-type": "application/json"
-        },
-        method,
-        body: JSON.stringify(profile)
-    })
+    try {
+        const response = await fetch(registrationURL, {
+            headers: {
+                "Content-type": "application/json"
+            },
+            method,
+            body: JSON.stringify(profile)
+        })
+    
+        const result = await response.json()
+        return result;
+        
+    } catch (error) {
 
-    const result = await response.json()
-    return result;
+    }
 }
