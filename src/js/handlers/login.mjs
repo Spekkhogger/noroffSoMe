@@ -11,7 +11,8 @@ export function logInFormFunc() {
     })    
 } 
 
-import { baseURL } from "../constants.mjs"
+import { save } from "../storage.mjs";
+import { baseURL } from "../constants.mjs";
 const path = "/auth/login";
 const method = "POST";
 
@@ -27,9 +28,10 @@ async function logInAccount(profile) {
         });
     
         const result = await response.json()
-        localStorage.setItem("token", result.accessToken); 
-    
+        console.log(result); 
+        save("token", result.accessToken);
+
     } catch (error) {
-        
+        console.log(error); 
     }
 }
