@@ -20,10 +20,10 @@ switch (path) {
 }
 
 
-async function testPosts(){
-    const posts = await postMethods.getPosts();
-    const testParent = document.querySelector("#testParent")
-    template.renderListOfPostTemplate(posts, testParent); 
-}
+// async function testPosts(){
+//     const posts = await postMethods.getPosts();
+//     const testParent = document.querySelector("#testParent")
+//     template.renderListOfPostTemplate(posts, testParent); 
+// }
 
-testPosts();
+// testPosts();
