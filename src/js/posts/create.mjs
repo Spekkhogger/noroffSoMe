@@ -9,15 +9,16 @@ import { authFetch } from "./fetch.mjs";
  * @throws {Error} If an error occurs during the creation process.
  */
 
-export async function create(newPost) {
+export async function createNewPostFunc(newPost) {
     const postURL = baseURL + postPath; 
+    console.log(postURL); 
 
    try {
     const response = await authFetch(postURL, {
         method: "post",
         body: JSON.stringify(newPost)
     })
-
+    
     return await response.json();
 
    } catch (error){

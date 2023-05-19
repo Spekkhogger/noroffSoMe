@@ -6,8 +6,7 @@ export async function getPost(id){
     const readPostURL = `${baseURL}${postPath}/${id}`; 
 
     try {
-        const response = await authFetch(readPostURL)
- 
+        const response = await authFetch(readPostURL)   
         return await response.json();
  
     } catch (error){

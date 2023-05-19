@@ -2,7 +2,7 @@ import { baseURL } from "../constants.mjs";
 const postPath = "/posts";
 import { authFetch } from "./fetch.mjs";
 
-export async function update(newPost) {
+export async function updatePostFunc(newPost) {
     const postURL = `${baseURL}${postPath}/${newPost.id}`; 
 
    try {

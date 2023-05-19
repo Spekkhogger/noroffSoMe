@@ -19,11 +19,11 @@
                 <form class="form-group col-sm-10 col-lg-5 col-md-5" id="create-post-form">
                     
                         <input class="form-control mb-2" type="text" name="title" required maxlength="100" placeholder="Title">
-                        <textarea class="form-control mb-2" name="content" id="post-content" cols="30" rows="2" required placeholder="Content"></textarea>
-                        <input class="form-control mb-2" type="text" name="tags" placeholder="Tags">
+                        <textarea class="form-control mb-2" name="body" id="post-content" cols="30" rows="2" required placeholder="Content"></textarea>
+                        <input class="form-control mb-2" type="text" name="tags[]" placeholder="Tags">
                         <input class="form-control mb-2" type="url" name="media" placeholder="Images">
 
-                        <button class="btn btn-success">Publish</button>
+                        <button class="btn btn-success" id="publishNewPostButton">Publish</button>
                     
                 </form>
             </div>
