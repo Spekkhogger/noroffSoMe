@@ -1,30 +1,49 @@
+import { getProfile } from "../profile/getprofile.mjs";
 
 export async function updateProfileHandler(){
-    const updatePostForm = document.querySelector("#update-profile-form")
+    const updateProfileForm = document.querySelector("#update-profile-form")
 
-    const url = new URL(location.href); 
     const { name, email } = load(profile); 
     console.log(name); 
 
-    // if (updatePostForm){
-    //     const oldPost = await getPost(id); 
-    //     console.log(oldPost);
+    if (updateProfileForm){
+        const profile = await getProfile(name); 
+        console.log(name);
 
-    //     updatePostForm.title.value = oldPost.title; 
-    //     updatePostForm.body.value = oldPost.body; 
+        updateProfileForm.name.value = name;
+        updateProfileForm.email.value = email;
+        updateProfileForm.avatar.value = profile.avatar;
+        updateProfileForm.banner.value = profile.banner;
 
+        
 
-    //     updatePostForm["tags[]"].value = oldPost.tags; 
-    //     updatePostForm.media.value = oldPost.media; 
+        updateProfileForm.addEventListener("submit", (event) =>{
+            event.preventDefault(); 
+            const form = event.target;
+            const formData = new FormData(form); 
+            const profile = Object.fromEntries(formData.entries()); 
 
-    //     updatePostForm.addEventListener("submit", (event) =>{
-    //         event.preventDefault(); 
-    //         const form = event.target;
-    //         const formData = new FormData(form); 
-    //         const post = Object.fromEntries(formData.entries()); 
-    //         post.id = id;
-
-    //         updatePostFunc(post);
-    //     })
-    // }
+            updateProfileFunc();
+        })
+    }
 }
+
+import { baseURL } from "../constants.mjs";
+const profilePath = "/profiles";
+import { authFetch } from "./fetch.mjs";
+
+async function updateProfileFunc(profileData) {
+    const profileURL = `${baseURL}${profilePath}/${profileData.name}`; 
+
+   try {
+    const response = await authFetch(profileURL, {
+        method: "put",
+        body: JSON.stringify(newPost)
+    })
+
+    return await response.json();
+
+   } catch (error){
+    console.log(error); 
+   }
+};
