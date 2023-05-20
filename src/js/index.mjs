@@ -19,11 +19,15 @@ switch (path) {
         registrationFormFunc();
         break;
     case "/profile/post/create/":
-        console.log(path); 
         createNewPostHandler();
         break;
     case "/profile/post/edit/":
-        console.log(path);
         updatePostHandler();
         break;
+    case "/profile/feed/":
+        console.log(path);
+        postMethods.getPosts();
 }
+
+
+// template.renderListOfPostTemplate(postMethods.getPosts(), ("#testParent")); 

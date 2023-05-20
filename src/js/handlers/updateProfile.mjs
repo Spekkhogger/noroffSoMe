@@ -23,6 +23,7 @@ export async function updateProfileHandler(){
             const profile = Object.fromEntries(formData.entries()); 
 
             updateProfileFunc();
+            window.location.replace("../../../profile/");
         })
     }
 }

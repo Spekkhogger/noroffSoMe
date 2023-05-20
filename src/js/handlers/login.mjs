@@ -31,6 +31,8 @@ async function logInAccount(profile) {
         save("token", accessToken);
         save("profile", user); 
 
+        window.location.replace("../../../profile/feed/");
+
     } catch (error) {
         console.log(error); 
     }

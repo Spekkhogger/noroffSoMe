@@ -10,20 +10,18 @@ export async function getPost(id){
         return await response.json();
  
     } catch (error){
-     console.log(error); 
+        console.log(error); 
     }
 }
-
 
 export async function getPosts(){
     const readPostsURL = `${baseURL}${postPath}`; 
 
     try {
         const response = await authFetch(readPostsURL)
- 
         return await response.json();
  
     } catch (error){
-     console.log(error); 
+        console.log(error); 
     }
 }
