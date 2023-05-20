@@ -4,7 +4,6 @@ export async function updateProfileHandler(){
     const updateProfileForm = document.querySelector("#update-profile-form")
 
     const { name, email } = load(profile); 
-    console.log(name); 
 
     if (updateProfileForm){
         const profile = await getProfile(name); 

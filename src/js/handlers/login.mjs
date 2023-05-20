@@ -27,9 +27,9 @@ async function logInAccount(profile) {
             body: JSON.stringify(profile)
         });
     
-        const result = await response.json()
-        console.log(result); 
-        save("token", result.accessToken);
+        const { accessToken, ...user } = await response.json()
+        save("token", accessToken);
+        save("profile", user); 
 
     } catch (error) {
         console.log(error); 
