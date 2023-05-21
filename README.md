@@ -1,6 +1,7 @@
 # Noroff Social Media Project / JavaScript2 CA
 
 This repository is for a social media app for Noroff
+[Project Trello Board](https://trello.com/b/GjpA7PKS/noroff-some-proj)
 
 ## Description
 This is my JavaScript2 course assignment. The assignment is to create a social media platform for Noroff Student to practice writing code with JS. To simplify the project I have created a lot of different pages to avoid using modals. The design of the platform is very simple at this time. This is intentional as the main focus of the assignment is to write JavaScript. 
