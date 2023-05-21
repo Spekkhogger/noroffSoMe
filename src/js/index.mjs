@@ -7,8 +7,10 @@ import * as postMethods from "./posts/read.mjs";
 
 import { createNewPostHandler } from "./handlers/createPostListener.mjs";
 import { updatePostHandler } from "./handlers/updatePostListener.mjs";
+import { getProfilePage } from "./profile/getprofile.mjs";
 
 const path = location.pathname;
+console.log("Hello");
 
 switch (path) {
     case "/":
@@ -27,6 +29,11 @@ switch (path) {
     case "/profile/feed/":
         console.log(path);
         postMethods.getPosts();
+        break;
+    case "/profile/":
+        console.log(path); 
+        getProfilePage();
+        break;
 }
 
 

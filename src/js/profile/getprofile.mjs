@@ -1,5 +1,6 @@
 import { baseURL } from "../constants.mjs";
-import { authFetch } from "./fetch.mjs";
+import { authFetch } from "../posts/fetch.mjs";
+import { load } from "../storage.mjs";
 const postPath = "/profiles";
 
 export async function getProfile(name){
@@ -26,4 +27,9 @@ export async function getProfiles(){
     } catch (error){
      console.log(error); 
     }
+}
+
+export function getProfilePage(){
+    const profileData = load("profile");
+    console.log(profileData); 
 }
