@@ -1,3 +1,9 @@
+/**
+ * Generates a post template element based on the provided post data.
+ * @param {Object} postData - The data object representing a post.
+ * @returns {HTMLElement} The generated post template element.
+ */
+
 export function postTemplate(postData){
     const post = document.createElement("div"); 
     post.classList.add("post"); 

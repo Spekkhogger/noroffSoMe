@@ -29,7 +29,7 @@ export async function getProfiles(){
     }
 }
 
-export function getProfilePage(){
-    const profileData = load("profile");
-    console.log(profileData); 
-}
+// export function getProfilePage(){
+//     const profileData = load("profile");
+//     console.log(profileData); 
+// }
