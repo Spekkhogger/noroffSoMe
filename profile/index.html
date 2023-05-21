@@ -1,0 +1,106 @@
+<!-- This is the profile page -->
+<!-- Here we should display information about the user -->
+<!-- The user should also be able to upload an avatar -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/index.css">
+    <title>Noroff Social Media</title>
+</head>
+<body>
+    <header>
+        <h1>Noroff</h1>
+    </header>
+
+
+    <main>
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+            <div class="container-fluid">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="feed/">Feed</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="post/create/">New post</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="profile/">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/profile/login/">Log out</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="profile-image col-8 col-sm-4 col-md-5 col-lg-2 mx-auto">
+                        <img src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png" 
+                        class="img-fluid img-thumbnail rounded-circle" alt="placeholder image">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Full name</h1>
+                    <h2>Email</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <div class="btn btn-success">Follow</div>
+                    <div class="btn btn-success">Message</div>
+                </div>
+            </div>      
+        </div>
+        <div class="container card m-3 mx-auto">
+            <div class="row">
+                <div class="col">
+                    <img src="" alt="">
+                </div>
+                <div class="col">
+                    <p>User</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Content of post</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>x comments</p>
+                </div>
+                <div class="col">
+                    <p>x likes</p>
+                </div>
+            </div>
+            <form class="row" action="">                    
+                <div class="col-auto">
+                    <input type="text" class="form-control" placeholder="Comment on post">
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-success" type="submit">Comment</button>
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+    </footer>
+    <script type="module" src="../../src/js/index.mjs"></script>
+</body>
+</html>
