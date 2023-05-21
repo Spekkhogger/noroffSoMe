@@ -1,6 +1,10 @@
 import { updatePostFunc } from "../posts/update.mjs";
 import { getPost } from "../posts/read.mjs";
 
+/**
+ * Handles the update post form submission and updates the corresponding post.
+ */
+
 export async function updatePostHandler(){
     const updatePostForm = document.querySelector("#edit-post-form")
 

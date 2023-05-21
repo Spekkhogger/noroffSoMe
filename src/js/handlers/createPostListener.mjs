@@ -1,5 +1,8 @@
 import { createNewPostFunc } from "../posts/create.mjs";
 
+/**
+ * Handles the submission of the create post form.
+ */
 export function createNewPostHandler(){
     const newPostForm = document.querySelector("#create-post-form")
 

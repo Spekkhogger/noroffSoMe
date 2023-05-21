@@ -1,5 +1,8 @@
 import { getProfile } from "../profile/getprofile.mjs";
 
+/**
+ * Handles the update profile form submission.
+ */
 export async function updateProfileHandler(){
     const updateProfileForm = document.querySelector("#update-profile-form")
 
@@ -32,6 +35,13 @@ import { baseURL } from "../constants.mjs";
 const profilePath = "/profiles";
 import { authFetch } from "./fetch.mjs";
 
+
+/**
+ * Updates the user's profile data by sending a PUT request to the server.
+ * @param {Object} profileData - The updated profile data to be sent.
+ * @returns {Promise<Object>} A promise that resolves to the updated profile data.
+ * @throws {Error} If an error occurs during the update process.
+ */
 async function updateProfileFunc(profileData) {
     const profileURL = `${baseURL}${profilePath}/${profileData.name}`; 
 
