@@ -26,6 +26,7 @@ export async function updatePostHandler(){
             post.id = id;
 
             updatePostFunc(post);
+            window.location.replace("../../../profile/feed");
         })
     }
 }

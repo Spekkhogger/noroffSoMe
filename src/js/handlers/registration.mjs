@@ -7,6 +7,7 @@ export function registrationFormFunc(){
         const profile = Object.fromEntries(formData.entries());
 
         await createAccount(profile); 
+        window.location.replace("../../../profile/login");
     })
 }
 

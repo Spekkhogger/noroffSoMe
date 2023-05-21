@@ -14,6 +14,6 @@ export async function updatePostFunc(newPost) {
     return await response.json();
 
    } catch (error){
-    console.log(error); 
+    
    }
 };

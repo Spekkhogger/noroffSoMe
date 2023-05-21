@@ -10,9 +10,9 @@ export function createNewPostHandler(){
             const formData = new FormData(form); 
             const post = Object.fromEntries(formData.entries()); 
 
-            console.log(post); 
 
             createNewPostFunc(post);
+            window.location.replace("../../../profile/feed");
         })
     }
 }
